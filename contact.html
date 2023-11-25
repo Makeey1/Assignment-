@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+                
+        </nav>
+    </header>
+   
+    <div class="log">
+        <form>
+            <div class="in">
+                <input type="text" name="full name" id="name" >
+                <span></span>
+                <label for="name">FULL NAME</label>
+                <br><br>
+            </div>
+            <div class="in">
+                <input type="email" name="email" id="email" >
+                <span></span>
+                <label for="email">EMAIL ADDRESS</label>
+                <br><br>   
+            </div>
+           <div class="in">
+            <input type="phonenumber" name="phonenumber" id="phonenumber" >
+            <span></span>
+            <label for="phonenumber">PHONE NUMBER</label>
+            <br><br>
+           </div>
+            <div class="in">
+                <input type="submit" value="submit"> 
+                <span></span>  
+            </div>
+            
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<style>
+    
+
+.navbar ul{
+    background-color: rgb(163, 89, 113);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+   list-style-type: none;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: black;
+}
+
+.navbar li{
+    float: right;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-image:linear-gradient(rgba(128, 88, 88, 0.75),rgba(128,88,88,0.75)), url("../images/pexels-somben-chea-1266130.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.log{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.log form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .in{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+
+}
+
+.in input{
+    /* width: 100%; */
+    padding: 0 5px ;
+    height: 40xp;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.in label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.in span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    /* height: 2px; */
+    background: rgb(163, 89, 113);
+     transition: .5s;
+} 
+
+.in input:focus ~label,
+.in input:valid ~label{
+    top: -5px;
+    color: rgb(163, 89, 113);
+
+}
+
+.in input:focus ~span::before,
+.in input:valid ~span::before{
+    width: 100%;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: rgb(163, 89, 113);
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    border-color: rgb(163, 89, 113);
+    transition: .5s;
+}
+</style>
